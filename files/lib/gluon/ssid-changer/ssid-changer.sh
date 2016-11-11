@@ -2,7 +2,7 @@
 
 # maximum simplyfied, no more ttvn rating
 check=$(batctl gwl -H|grep -v "gateways in range"|wc -l)
-name=$(nodename status|tail -c 21)
+name=$(uname -n|tail -c 21)
 offline="FF_OFFLINE_"
 default="FREIFUNK"
 offi=$offline$name
