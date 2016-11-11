@@ -9,6 +9,8 @@ decides if a change of the SSID is necessary.
 *It is a simplified rewrite of https://github.com/ffac/gluon-ssid-changer that doesn't check
 the tx value any more. It is in use in Freifunk Freiburg*
 
+*if you want a more advanced script, or are in need of 2.4G AND 5G than try the aachen script or the rewrite from Freifunk Nord https://github.com/Freifunk-Nord/gluon-ssid-changer/*
+
 emergency.sh
 ============
 this repository also includes an emergency script which checks for a working batman-adv
