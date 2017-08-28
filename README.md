@@ -24,7 +24,7 @@ Create a file "modules" with the following content in your
 
 GLUON_SITE_FEEDS="ssidchanger"<br>
 PACKAGES_SSIDCHANGER_REPO=https://github.com/viisauksena/gluon-ssid-changer.git<br>
-PACKAGES_SSIDCHANGER_COMMIT=f135ba05913feb4451e4cf067b735b095a4ee243<br>
+PACKAGES_SSIDCHANGER_COMMIT=0a9247818962b217bc2d1e30002469c9f83efaf7<br>
 PACKAGES_SSIDCHANGER_BRANCH=lede<br>
 
 With this done you can add the package gluon-ssid-changer to your site.mk
