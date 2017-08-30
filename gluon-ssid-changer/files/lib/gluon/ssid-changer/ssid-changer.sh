@@ -13,7 +13,7 @@ if [ $check -eq 0 ]; then
 fi
 
 if [ "$(uci get wireless.client_radio0.ssid)" == "$ssid" ] && [ "$(grep ^ssid=.* $hostapdconf|cut -d= -f2)" == "$ssid" ]; then 
-        echo "$0 - still on $ssid";
+        echo "$0 - still on $ssid" | logger
         exit 0;
 fi
 echo "$0 change ssid to $ssid" | logger
