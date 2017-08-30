@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # maximum simplyfied, no more ttvn rating
-check=$(batctl gwl -H|grep -v "gateways in range"|wc -l)
+check=$(batctl gwl -H|grep -v "No gateways in range"|wc -l)
 name=$(uci get system.@system[0].hostname)
 offline="FF_OFFLINE_"
 default="freiburg.freifunk.net"
