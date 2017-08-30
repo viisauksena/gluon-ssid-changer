@@ -8,15 +8,16 @@ default="freiburg.freifunk.net"
 hostapdconf=/var/run/hostapd-phy0.conf
 
 ssid=$default
-if [ $check -eq 0 ]; then
+if [ $check -eq 0 ] ; then
         ssid=$offline$name;
 fi
 
-if [ "$(uci get wireless.client_radio0.ssid)" == "$ssid" ] && [ "$(grep ^ssid=.* $hostapdconf|cut -d= -f2)" == "$ssid" ]; then 
+if [ "$(uci get wireless.client_radio0.ssid)" == "$ssid" ] && [ "$(grep ^ssid=.* $hostapdconf|cut -d= -f2)" == "$ssid" ] ; then 
         echo "$0 - still on $ssid" | logger
         exit 0;
 fi
+
 echo "$0 change ssid to $ssid" | logger
 uci set wireless.client_radio0.ssid="$ssid"
-sed -i s/^ssid=.*/ssid=$ssid/ /var/run/hostapd-phy0.conf
+sed -i s/^ssid=.*/ssid=$ssid/ $hostapdconf
 killall -HUP hostapd
